@@ -83,9 +83,17 @@
         <div class="unit">Giây</div>
       </div>
     </div>
-    <audio autoplay loop>
+    <audio id="myAudio" autoplay muted loop>
       <source src="basubexo.m4a" type="audio/mpeg">
     </audio>
+	 <script>
+    document.body.addEventListener("click", () => {
+      const audio = document.getElementById("myAudio");
+      audio.muted = false;
+      audio.play();
+    }, { once: true });
+  </script>
+
   </div>
 
   <script>
