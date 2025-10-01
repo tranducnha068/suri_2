@@ -22,6 +22,24 @@ position: fixed;
 		top: 0;
 		left: 0; 
 }
+.boxed-title {
+  background-color: white;
+  border-radius: 12px;         /* Bo tròn 4 góc */
+  padding: 20px;
+  border: 2px solid #ccc;      /* Viền nhẹ */
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+@font-face {
+            font-family: 'SVN-Fiolex Girls';
+            src: url('font/SVN-Fiolex Girls.ttf') format('truetype');
+        }
+.boxed-title h1 {
+  color: #0077cc;              /* Chữ xanh */
+  margin: 0;
+  font-family: 'SVN-Fiolex Girls', cursive;
+  font-size: 2rem;
+}
 
 .msg {
 	margin: 0 auto;
