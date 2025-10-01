@@ -92,8 +92,8 @@ else
 <div id="bg"></div>
 <div id="myModal" class="reveal-modal large">
     <div id="traloi">
-      <h1><center>Trả lời đi nè <img src="http://vozforums.com/images/smilies/Off/angry.gif"/></center></h1></br>
-	  <p>Có phải Suri là người dễ thương và xinh đẹp nhất trái đất này không ? <img src="http://vozforums.com/images/smilies/Off/nosebleed.gif"/>  Nhập câu trả lời xuống bên dưới nha</br></br></p>
+      <h1><center>Hẹ hẹ hẹ, không cũng phải trả lời <img src="https://media.tenor.com/8nAmbBuw5dwAAAAj/pepe-the-frog-laugh.gif" width="30" height="30"/></center></h1></br>
+	  <p>Suri là người dễ thương và xinh đẹp nhất trái đất này phải không ? <img src="img/love.png" width="20" height="20"/> Nhập câu trả lời xuống bên dưới nha</br></br></p>
       <form id="f" name="f">
         <input id="form" name="txt" type="text" />
 
@@ -130,23 +130,25 @@ else
 	</div>
 </div>
 		
-<div class="msg">
+<div class="msg"> 
 			
-<h1> <?php if($_GET['em']==null) echo 'EM'; else echo $_GET['em']; ?> Trả lời ik nha</h1>
+ <?php if($_GET['em']==null) echo 'EM'; else echo $_GET['em']; ?> 
+ <div class ="boxed-title"> <h1>Tham gia câu hỏi hông <p>Thách click được chữ có đó
+ <P> hẹ hẹ hẹ</h1> </div>
 			
-<h2><?php if($_GET['em']==null) echo 'EM'; else echo $_GET['em']; ?> KHÔNG TRẢ LỜI</br>
-là sẽ phải Stream Squad 1 tuần đó ♥</h2>
+<?php if($_GET['em']==null) echo 'EM'; else echo $_GET['em']; ?> 
+
 
 		
 </div>
 		
 <center>
 <div id="co"> 
-<a href="#" data-reveal-id="myModal">không <?php if($_GET['em']==null) echo 'EM'; else echo $_GET['em']; ?> đáng ghét thì có</a>
+<a href="#" data-reveal-id="myModal">không,<?php if($_GET['em']==null) echo 'EM'; else echo $_GET['em']; ?> dĩ nhiên là không</a>
 </div> 
 
 <div id="lbNo" style="position:absolute; left: 700px; top: 300px;"> 
-<input type="button" value="dĩ nhiên òi !! công chúa là đẹp nhất" style="cursor:pointer;" onMouseMove="move()" > 
+<input type="button" value="có chứ, phải tham gia thôi" style="cursor:pointer;" onMouseMove="move()" > 
 </div>
 </center> 
 
@@ -160,5 +162,15 @@ là sẽ phải Stream Squad 1 tuần đó ♥</h2>
       });
     });
  </script>	
+ 
+  <audio id="myAudio" autoplay muted loop>
+      <source src="bgm_suri.mp3" type="audio/mpeg">
+	  <script>
+    document.body.addEventListener("click", () => {
+      const audio = document.getElementById("myAudio");
+      audio.muted = false;
+      audio.play();
+    }, { once: true }); // chỉ chạy một lần
+  </script>
 </body>
 </html>
