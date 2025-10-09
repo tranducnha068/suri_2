@@ -31,9 +31,10 @@ position: fixed;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
 }
 @font-face {
-            font-family: 'SVN-Fiolex Girls';
-            src: url('file:///font\SVN-Fiolex-Girls.ttf') format('truetype');
-        }
+  font-family: 'SVN-Fiolex Girls';
+  src: url('fonts/SVN-Fiolex-Girls.ttf') format('truetype');
+}
+
 .boxed-title h1 {
   color: #0077cc;              /* Chữ xanh */
   margin: 0;
