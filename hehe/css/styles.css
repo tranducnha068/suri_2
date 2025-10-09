@@ -32,7 +32,7 @@ position: fixed;
 }
 @font-face {
   font-family: 'SVN-Fiolex Girls';
-  src: url('fonts/SVN-Fiolex-Girls.ttf') format('truetype');
+  src: url('font/SVN-Fiolex-Girls.ttf') format('truetype');
 }
 
 .boxed-title h1 {
