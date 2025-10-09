@@ -32,7 +32,7 @@ position: fixed;
 }
 @font-face {
             font-family: 'SVN-Fiolex Girls';
-            src: url('font/SVN-Fiolex Girls.ttf') format('truetype');
+            src: url('font/SVN-Fiolex-Girls.ttf') format('truetype');
         }
 .boxed-title h1 {
   color: #0077cc;              /* Chữ xanh */
