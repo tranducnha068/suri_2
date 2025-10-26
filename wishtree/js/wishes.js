@@ -1,11 +1,11 @@
 const wishes = [
-  { text: "Pi Cạp Cạp", video: "videos/pi.mp4", top: "27%", left: "32%" },
-  { text: "Denjin", video: "videos/Denjin.mp4", top: "32%", left: "48%" },
-  { text: "Tak", video: "videos/tak.mp4", top: "40%", left: "17%" },
-  { text: "Ochirol iz here :3", video: "videos/Ochirol.mp4", top: "36%", left: "60%" },
-  { text: "Usagi Kuro", video: "videos/usagikuro.mp4", top: "50%", left: "35%" },
-  { text: "Huy Bels", video: "videos/huybels.mp4", top: "50%", left: "20%" },
-  { text: "NSND HuuDu", video: "videos/nsndhuudu.mp4", top: "42%", left: "40%" },
+  { text: "Pi Cạp Cạp", video: "https://github.com/tranducnha068/suri_2/releases/download/media/pi.mp4", top: "27%", left: "32%" },
+  { text: "Denjin", video: "https://github.com/tranducnha068/suri_2/releases/download/media/Denjin.mp4", top: "32%", left: "48%" },
+  { text: "Tak", video: "https://github.com/tranducnha068/suri_2/releases/download/media/tak.mp4", top: "40%", left: "17%" },
+  { text: "Ochirol iz here :3", video: "vhttps://github.com/tranducnha068/suri_2/releases/download/media/Ochirol.mp4", top: "36%", left: "60%" },
+  { text: "Usagi Kuro", video: "https://github.com/tranducnha068/suri_2/releases/download/media/usagikuro.mp4", top: "50%", left: "35%" },
+  { text: "Huy Bels", video: "https://github.com/tranducnha068/suri_2/releases/download/media/huybels.mp4", top: "50%", left: "20%" },
+  { text: "NSND HuuDu", video: "https://github.com/tranducnha068/suri_2/releases/download/media/nsndhuudu.mp4", top: "42%", left: "40%" },
   { text: "Nochigo gâu gâu", video: "videos/travel.mp4", top: "39%", left: "69%" }
 ];
 
@@ -55,7 +55,7 @@ function createWishTags() {
               const bgMusic = document.getElementById('bg-music');
 
               document.getElementById('wish-text').innerText = "🎁 Món quà cuối cùng dành cho Công Chúa Suri!";
-              videoEl.src = 'videos/anhdaden.mp4';
+              videoEl.src = 'https://github.com/tranducnha068/suri_2/releases/download/media/anhdaden.mp4';
               videoEl.style.display = 'block';
               bgMusic.pause();
 
@@ -96,12 +96,13 @@ if (slime1) {
     const bgMusic = document.getElementById('bg-music');
 
     document.getElementById('wish-text').innerText = "[FMV-Suri Mukeki's Fan Arts] Bad Apple !!!";
-    videoEl.src = 'videos/fmv.mp4'; 
+    videoEl.src = 'https://github.com/tranducnha068/suri_2/releases/download/media/fmv.mp4'; 
     videoEl.style.display = 'block';
     bgMusic.pause();
 
     document.getElementById('wish-popup').style.display = 'block';
   });
 }
+
 
 }
