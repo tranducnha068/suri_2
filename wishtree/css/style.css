@@ -1,0 +1,320 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url('../img/tree.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+/* 🌿 Nội dung chính */
+#main-content {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: none;
+}
+
+/* 🔐 Màn hình nhập mật khẩu */
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#popup h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#password-input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  margin-top: 10px;
+  width: 220px;
+  text-align: center;
+}
+
+#submit-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* 🌟 Hiệu ứng ánh sáng */
+#light-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+  pointer-events: none;
+  animation: pulseLight 3s ease-in-out infinite;
+  display: none;
+}
+
+@keyframes pulseLight {
+  0%   { opacity: 0.2; }
+  50%  { opacity: 0.5; }
+  100% { opacity: 0.2; }
+}
+
+/* 🏷️ Thẻ ước nguyện */
+.wish-image {
+  position: absolute;
+  width: 60px;
+  height: 90px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  z-index: 2;
+  animation: swingSides 4s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+/* 🔄 Hiệu ứng đung đưa trái phải */
+@keyframes swingSides {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(5deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* 🎥 Popup video điều ước */
+#wish-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  display: none;
+  z-index: 999;
+  text-align: center;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  #wish-popup {
+    width: 95vw;
+    padding: 15px;
+  }
+
+  #wish-video {
+    max-width: 100%;
+    max-height: 50vh;
+  }
+}
+#wish-text {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+#wish-video {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+#close-popup {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* 🎉 Popup chào mừng */
+#welcome-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.welcome-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  max-width: 90%;
+}
+
+.welcome-box h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.welcome-box p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#welcome-popup button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* 🐾 Slime container dưới cây */
+#slime-container {
+  display: none; 
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 30px;
+  z-index: 5;
+}
+
+/* 🐌 Ảnh slime di chuyển qua lại */
+.slime {
+  width: 300px;       
+  height: auto;
+  animation: slimeMove 4s linear infinite;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+.slime:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 600px) {
+  .slime {
+    width: 80px;
+  }
+}
+.slime:active {
+  transform: scale(1.2) translateY(-10px);
+}
+
+@keyframes slimeMove {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(20px); }
+  100% { transform: translateX(0); }
+}
+/* 🎁 Popup chúc mừng cuối cùng */
+#final-popup {
+	display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.final-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  max-width: 90%;
+}
+
+.final-box h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.final-box p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#final-popup button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#team-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.team-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  max-width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.team-box h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+#team-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+#team-list li {
+  font-size: 18px;
+  margin: 6px 0;
+}
+
+#close-team {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

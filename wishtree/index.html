@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>♥♥♥ Wish Tree</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+</head>
+
+<body>
+
+  
+  <div id="popup">
+    <h2>Nhập mật mã để vào vườn của Làng Chanh !!! <p> Mật mã bao gồm 4 chữ số, có liên quan tới Suri ♥♥♥</h2>
+    <input type="password" id="password-input" placeholder="Nhập mật mã...">
+    <button id="submit-btn">Mở cửa vườn Làng Chanh</button>
+  </div>
+
+  <div id="light-effect"></div>
+  <div id="main-content">
+    <!-- Các thẻ ước nguyện sẽ được tạo bằng JS -->
+  </div>
+<!-- 🐾 Slime di chuyển dưới cây -->
+<div id="slime-container">
+  <img src="img/slimenongdan.png" class="slime" id="slime1">
+  <img src="img/slimemod.png" class="slime" id="slime2">
+  <img src="img/slimeking.png" class="slime" id="slime3">
+</div>
+
+  <!-- 🎥 Popup hiển thị video và nội dung điều ước -->
+  <div id="wish-popup">
+    <p id="wish-text"></p>
+    <video id="wish-video" controls style="display:none;"></video>
+    <button id="close-popup">Đóng</button>
+  </div>
+<!-- 🎉 Popup chào mừng -->
+<div id="welcome-popup">
+  <div class="welcome-box">
+    <h2>Đã mở cửa thành công</h2>
+    <p>Mời Công Chúa Suri tham quan Cây Ước Nguyện !!!</p>
+    <button id="close-welcome">Bắt đầu hành trình</button>
+  </div>
+</div>
+<!-- 🎁 Popup chúc mừng khi mở hết thẻ -->
+<div id="final-popup">
+  <div class="final-box">
+    <h2>🎉Chúc mừng Công Chúa Suri đã mở hết thẻ ước nguyện của các cư dân !!!</h2>
+    <p>Thành công mở khóa món quà cuối cùng 🎁</p>
+	<p> Đoán xem thử món quà nằm ở đâu nhé :3 </p>
+    <button id="close-final">Khám phá món quà</button>
+  </div>
+</div>
+<!-- 👑 Popup danh sách người tham gia -->
+<div id="team-popup">
+  <div class="team-box">
+    <h2>🌟 Xin chân thành cảm ơn những cư dân trong tầng hầm đã tham gia</h2>
+    <ul id="team-list">
+      <li>Ken Miyamoto - Coder người Lào =))))</li>
+	  <li>Noshiro - Nhân Viên CSKH bên Cam</li>
+      <li>Agent Pi - Kẻ đầu sỏ + ý tưởng</li>
+	  <li>Tak - Họa sĩ a.k.a Người điện</li>
+	  <li>Huy Bél - Đẹp trai xin hãy bình thường</li>
+	  <li>Ochirol - Cute hột me phomaique</li>
+	  <li>Usagi Kuro - Ông hoàng delay</li>
+	  <li>NSND Hữu Du - Chúa tể Ê Đít</li>
+    </ul>
+    <button id="close-team">Đóng lại</button>
+  </div>
+</div>
+
+
+  <!-- 🔊 Âm thanh nền & âm thanh mở khóa -->
+  <audio id="bg-music" src="sounds/whoyou.mp3" loop></audio>
+  <audio id="unlock-sound" src="sounds/unlock.mp3"></audio>
+
+  <!-- 📜 Chèn các file JS -->
+  <script src="js/wishes.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/popup.js"></script>
+  <script src="js/protect.js"></script>
+  <script src="js/heart.js"></script>
+  <script src="js/slime.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Title marquee
+    const title = "♥♥♥ Wish Tree ";
+    let idx = 0;
+    setInterval(() => {
+      document.title = title.slice(idx) + title.slice(0, idx);
+      idx = (idx + 1) % title.length;
+    }, 150);
+  });
+</script>
+
+</body>
+</html>
