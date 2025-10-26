@@ -98,8 +98,11 @@ one()
 							$("#divResult2").fadeIn(2000,function()
 									{
 									$("#divResult3").fadeOut(0);
-									$("#divResult3").html("<p> Chúc Công Chúa Suri một sinh nhật vui vẻ và tràn đầy hạnh phúc bên viu ơ <p> ♥ Mãi iu ♥</p></br>");
-									$("#divResult3").fadeIn(2000);
+									$("#divResult3").html(`
+  <p> Chúc Công Chúa Suri một sinh nhật vui vẻ và tràn đầy hạnh phúc bên viu ơ </p>
+  <p><a href="http://www.surimukeki.live/wishtree" target="_blank" style="color: pink; text-decoration: none;">Nhấn tiếp vào đây nhé Công Chúa ♥</a></p><br>`);
+$("#divResult3").fadeIn(2000);
+
 									}
 								);
 							}
